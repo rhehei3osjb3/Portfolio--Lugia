@@ -2,28 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio - Lugia</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Lugia Portfolio</title>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .buttons button {
+      background-color: #222;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .buttons button:hover {
+      background-color: #444;
+    }
+
+    .image-display img {
+      max-width: 90vw;
+      max-height: 80vh;
+      border: 3px solid #fff;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>My Portfolio - Lugia</h1>
-  <div class="gallery">
-    <img src="IMG_1008.jpeg" alt="Image 1">
-    <img src="IMG_1009.jpeg" alt="Image 2">
-    <img src="IMG_1010.jpeg" alt="Image 3">
-    <img src="IMG_1011.jpeg" alt="Image 4">
-    <img src="IMG_1012.jpeg" alt="Image 5">
-    <img src="IMG_1013.jpeg" alt="Image 6">
-    <img src="IMG_1014.jpeg" alt="Image 7">
-    <img src="IMG_1015.jpeg" alt="Image 8">
-    <img src="IMG_1016.jpeg" alt="Image 9">
-    <img src="IMG_1017.jpeg" alt="Image 10">
-    <img src="IMG_1018.jpeg" alt="Image 11">
-    <img src="IMG_1019.jpeg" alt="Image 12">
-    <img src="IMG_1020.jpeg" alt="Image 13">
-    <img src="IMG_1021.jpeg" alt="Image 14">
-    <img src="IMG_1022.jpeg" alt="Image 15">
+  <h1>ⱠɄGIA Portfolio</h1>
+
+  <div class="buttons">
+    <button onclick="showImage('IMG_1008.jpeg')">Image 1</button>
+    <button onclick="showImage('IMG_1009.jpeg')">Image 2</button>
+    <button onclick="showImage('IMG_1010.jpeg')">Image 3</button>
+    <button onclick="showImage('IMG_1011.jpeg')">Image 4</button>
+    <button onclick="showImage('IMG_1012.jpeg')">Image 5</button>
+    <button onclick="showImage('IMG_1013.jpeg')">Image 6</button>
+    <button onclick="showImage('IMG_1014.jpeg')">Image 7</button>
+    <button onclick="showImage('IMG_1015.jpeg')">Image 8</button>
+    <button onclick="showImage('IMG_1016.jpeg')">Image 9</button>
+    <button onclick="showImage('IMG_1017.jpeg')">Image 10</button>
+    <button onclick="showImage('IMG_1018.jpeg')">Image 11</button>
+    <button onclick="showImage('IMG_1019.jpeg')">Image 12</button>
+    <button onclick="showImage('IMG_1020.jpeg')">Image 13</button>
+    <button onclick="showImage('IMG_1021.jpeg')">Image 14</button>
+    <button onclick="showImage('IMG_1022.jpeg')">Image 15</button>
   </div>
+
+  <div class="image-display" id="display">
+    <img src="IMG_1008.jpeg" alt="Portfolio Image" id="main-image">
+  </div>
+
+  <script>
+    function showImage(src) {
+      document.getElementById("main-image").src = src;
+    }
+  </script>
 </body>
 </html>
